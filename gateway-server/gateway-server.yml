@@ -35,6 +35,7 @@ server:
 eureka:
   instance:
     preferIpAddress: true
+    instance-id: ${spring.application.name}:${instanceId:${random.value}}
   client:
     registerWithEureka: true
     fetchRegistry: true
