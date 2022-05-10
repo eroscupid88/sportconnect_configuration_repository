@@ -40,7 +40,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eurekaserver:localhost}:7070/eureka/
+      defaultZone: http://${EUREKASERVER:localhost}:7070/eureka/
       # defaultZone: http://eurekaserver:7070/eureka/
 
 management:
