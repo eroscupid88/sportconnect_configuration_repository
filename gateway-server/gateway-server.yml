@@ -41,7 +41,6 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${EUREKASERVER:localhost}:7070/eureka/
-      # defaultZone: http://eurekaserver:7070/eureka/
 
 management:
   endpoints:
