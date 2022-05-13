@@ -10,23 +10,17 @@ spring:
     gateway:
       discovery:
         # this enable eureka path
-        locator:
-          enabled: true
-          lower-case-service-id: true
+        # locator:
+        #   enabled: true
+        #   lower-case-service-id: true
 
-      # - id: sport-organization-service
-      #   uri: lb://SPORT-ORGANIZATION-SERVICE
-      #   predicates:
-      #     - Path=/organization/**
-      #   filters:
-      #     - RewritePath=/organization/(?<path>.*), /$\{path}
-      # - id: sport-event-service
-      #   uri: lb://SPORT-EVENT-SERVICE
-      #   predicates:
-      #     - Path=/event/**
-      #   filters:
-      #     - RewritePath=/event/(?<path>.*), /$\{path}
-      # use service discovery as route
+        - id: team-service
+          uri: lb://TEAM-SERVICE
+          predicates:
+            - Path=/team-service/**
+          filters:
+            - RewritePath=/team-service/(?<path>.*), /$\{path}
+
     loadbalancer.ribbon.enabled: false
 
 server:
